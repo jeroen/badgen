@@ -1,0 +1,17 @@
+Package: badgen
+Type: Package
+Title: Fast and Simple Badge Generator
+Version: 1.0.0
+Authors@R: person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
+    comment = c(ORCID = "0000-0002-4035-0289"))
+Description: Bindings to Badgen <https://github.com/badgen/badgen>: generate beautiful
+    badges in svg format without requiring internet access. The badges can be 
+    converted to png using the rsvg package as shown in examples.
+License: MIT + file LICENSE
+Encoding: UTF-8
+BugReports: https://github.com/jeroen/badgen/issues
+URL: https://github.com/jeroen/badgen/
+LazyData: true
+Imports: V8
+Suggests: rsvg
+RoxygenNote: 7.2.3
