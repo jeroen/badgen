@@ -4,7 +4,7 @@ Title: Fast and Simple Badge Generator
 Version: 1.0.0
 Authors@R: person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu",
     comment = c(ORCID = "0000-0002-4035-0289"))
-Description: Generate beautiful badges in 'svg' format without∂ internet access. 
+Description: Generate beautiful badges in 'svg' format without internet access. 
     Images can be converted to 'png' using the 'rsvg' package as shown in examples.
 License: MIT + file LICENSE
 Encoding: UTF-8
