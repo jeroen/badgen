@@ -26,6 +26,8 @@ badgen(
 \item{style}{one of 'classic' or 'flat'}
 
 \item{scale}{resize badge, default size is 1}
+
+\item{svg_icon}{iteral svg string with icon, see examples}
 }
 \description{
 Generate badges
@@ -46,7 +48,5 @@ svg2 <- badgen('mypkg', 'awesome', scale = 4, svg_icon = rlogo)
 
 \dontrun{
 writeLines(svg2, 'test2.svg')
-browseURL('test2.svg')
-rsvg::rsvg_png('test2.svg', 'test2.png')
-browseURL('test2.png')}
+browseURL('test2.svg')}
 }

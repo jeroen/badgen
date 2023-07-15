@@ -7,6 +7,7 @@
 #' @param labelColor background for label part
 #' @param style one of 'classic' or 'flat'
 #' @param scale resize badge, default size is 1
+#' @param svg_icon iteral svg string with icon, see examples
 #' @examples
 #' svg <- badgen("yolo", "success!", style = 'flat')
 #' \dontrun{
