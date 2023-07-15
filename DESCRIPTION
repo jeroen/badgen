@@ -10,7 +10,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 BugReports: https://github.com/jeroen/badgen/issues
 URL: https://github.com/jeroen/badgen/
-LazyData: true
 Imports:
     jsonlite,
     V8
