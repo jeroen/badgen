@@ -33,9 +33,11 @@ badgen(
 svg string with the badge
 }
 \description{
-Generate badges
+Generate a badge in the form of an svg string. Svg files can embedded directly
+in websites or converted to png as shown in examples.
 }
 \examples{
+home <- setwd(tempdir())
 svg <- badgen("yolo", "success!", style = 'flat')
 writeLines(svg, 'test.svg')
 browseURL('test.svg')
@@ -52,4 +54,5 @@ browseURL('test2.svg')
 # Cleanup
 Sys.sleep(1)
 unlink(c('test.svg', 'test.png', 'test2.svg'))
+setwd(home)
 }

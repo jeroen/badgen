@@ -1,5 +1,8 @@
 #' Generate badges
 #'
+#' Generate a badge in the form of an svg string. Svg files can embedded directly
+#' in websites or converted to png as shown in examples.
+#'
 #' @export
 #' @returns svg string with the badge
 #' @param label text for left part of the badge
@@ -10,6 +13,7 @@
 #' @param scale resize badge, default size is 1
 #' @param svg_icon iteral svg string with icon, see examples
 #' @examples
+#' home <- setwd(tempdir())
 #' svg <- badgen("yolo", "success!", style = 'flat')
 #' writeLines(svg, 'test.svg')
 #' browseURL('test.svg')
@@ -26,6 +30,7 @@
 #' # Cleanup
 #' Sys.sleep(1)
 #' unlink(c('test.svg', 'test.png', 'test2.svg'))
+#' setwd(home)
 badgen <- function(label, status = 'v1.2.3', color = 'green', labelColor = '555', style = 'classic', scale = 1, svg_icon = NULL){
   style <- match.arg(style, c("classic", "flat"))
   args <- list(
