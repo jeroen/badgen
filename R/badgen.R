@@ -1,6 +1,7 @@
 #' Generate badges
 #'
 #' @export
+#' @returns svg string with the badge
 #' @param label text for left part of the badge
 #' @param status text for right part of the badge
 #' @param color background for status part
@@ -10,21 +11,21 @@
 #' @param svg_icon iteral svg string with icon, see examples
 #' @examples
 #' svg <- badgen("yolo", "success!", style = 'flat')
-#' \dontrun{
 #' writeLines(svg, 'test.svg')
 #' browseURL('test.svg')
 #'
 #' # Convert svg to bitmap
 #' rsvg::rsvg_png('test.svg', 'test.png')
-#' browseURL('test.png')}
 #'
 #' # Add an svg icon to the badge
 #' rlogo <- readLines('https://www.r-project.org/logo/Rlogo.svg')
 #' svg2 <- badgen('mypkg', 'awesome', scale = 4, svg_icon = rlogo)
-#'
-#' \dontrun{
 #' writeLines(svg2, 'test2.svg')
-#' browseURL('test2.svg')}
+#' browseURL('test2.svg')
+#'
+#' # Cleanup
+#' Sys.sleep(1)
+#' unlink(c('test.svg', 'test.png', 'test2.svg'))
 badgen <- function(label, status = 'v1.2.3', color = 'green', labelColor = '555', style = 'classic', scale = 1, svg_icon = NULL){
   style <- match.arg(style, c("classic", "flat"))
   args <- list(

@@ -29,24 +29,27 @@ badgen(
 
 \item{svg_icon}{iteral svg string with icon, see examples}
 }
+\value{
+svg string with the badge
+}
 \description{
 Generate badges
 }
 \examples{
 svg <- badgen("yolo", "success!", style = 'flat')
-\dontrun{
 writeLines(svg, 'test.svg')
 browseURL('test.svg')
 
 # Convert svg to bitmap
 rsvg::rsvg_png('test.svg', 'test.png')
-browseURL('test.png')}
 
 # Add an svg icon to the badge
 rlogo <- readLines('https://www.r-project.org/logo/Rlogo.svg')
 svg2 <- badgen('mypkg', 'awesome', scale = 4, svg_icon = rlogo)
-
-\dontrun{
 writeLines(svg2, 'test2.svg')
-browseURL('test2.svg')}
+browseURL('test2.svg')
+
+# Cleanup
+Sys.sleep(1)
+unlink(c('test.svg', 'test.png', 'test2.svg'))
 }
