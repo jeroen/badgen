@@ -10,7 +10,7 @@ Description: Bindings to 'badgen' <https://www.npmjs.com/package/badgen> to
 License: MIT + file LICENSE
 Encoding: UTF-8
 BugReports: https://github.com/jeroen/badgen/issues
-URL: https://github.com/jeroen/badgen/
+URL: https://jeroen.r-universe.dev/badgen
 Imports:
     jsonlite,
     V8
